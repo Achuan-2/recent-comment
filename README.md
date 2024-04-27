@@ -9,7 +9,7 @@
 
 ## 配置
 
-需要设置环境变量
+需要在vercel中设置环境变量，配置完成后请redeploy！
 
 |name|description|
 |:---|:---|
