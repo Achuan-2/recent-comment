@@ -59,7 +59,8 @@ module.exports = async (req, res) => {
       let commentData = {
         body: comment.body,
         createdAt: comment.createdAt,
-        url: comment.url,
+        url: discussion.url, // 使用文章的 URL
+        // url: comment.url, // 使用评论的 URL
         author: comment.author
       };
       commentsAndReplies.push(commentData);
@@ -69,7 +70,8 @@ module.exports = async (req, res) => {
         let replyData = {
           body: reply.body,
           createdAt: reply.createdAt,
-          url: comment.url, // 使用评论的 URL
+          url: discussion.url, // 使用文章的 URL
+          // url: comment.url, // 使用评论的 URL
           author: reply.author
         };
         commentsAndReplies.push(replyData);
