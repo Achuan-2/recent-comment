@@ -1,8 +1,15 @@
+## 用途
+
+
+获取Hexo博客giscus评论组件的最新评论
+
 ## 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/weekdaycare/discussion-new-api)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/Achuan-2/recent-comment)
 
-## 环境变量
+## 配置
+
+需要设置环境变量
 
 |name|description|
 |:---|:---|
