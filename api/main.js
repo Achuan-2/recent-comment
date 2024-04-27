@@ -56,10 +56,12 @@ module.exports = async (req, res) => {
   let commentsAndReplies = [];
   data.data.repository.discussions.nodes.forEach(discussion => {
     discussion.comments.nodes.forEach(comment => {
+      post_url = discussion.title.endsWith('/') ? discussion.title + '#comments' : discussion.title + '.html#comments';
+
       let commentData = {
         body: comment.body,
         createdAt: comment.createdAt,
-        url: discussion.title+'.html#comments', // 使用文章的 URL
+        url: post_url, // 使用文章的 URL
         // url: comment.url, // 使用评论的 URL
         author: comment.author
       };
@@ -70,7 +72,7 @@ module.exports = async (req, res) => {
         let replyData = {
           body: reply.body,
           createdAt: reply.createdAt,
-          url: discussion.title+'.html#comments', // 使用文章的 URL
+          url: post_url, // 使用文章的 URL
           // url: comment.url, // 使用评论的 URL
           author: reply.author
         };
